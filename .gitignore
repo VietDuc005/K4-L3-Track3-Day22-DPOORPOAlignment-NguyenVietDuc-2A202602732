@@ -12,9 +12,11 @@ __pycache__/
 # notebooks/*.ipynb IS committed for submission (outputs kept for grading).
 # The Jupytext `.py` files are the source of truth.
 
-# Lab artifacts: weights stay local. The small evidence files below ARE committed,
-# because the auto-grader reads only what is in the repo.
-models/
+models/*
+!models/.gitkeep
+!models/*/
+models/*/*
+!models/*/config.json
 adapters/*
 !adapters/.gitkeep
 !adapters/*/
@@ -34,6 +36,7 @@ gguf*/
 *.gguf
 runs/
 wandb/
+lab22_results/
 
 # HuggingFace cache
 .cache/
